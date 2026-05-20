@@ -50,21 +50,21 @@ Fix: validate on blur for Email and Password Confirm at minimum.
 
 ## Installation
 
-### Option 1 — from `.skill` file
+Copy the skill folder into your Claude Code skills directory:
 
-1. Download [`design-heuristics.skill`](./design-heuristics.skill)
-2. In Claude Code, run:
-   ```
-   /install-skill design-heuristics.skill
-   ```
-
-### Option 2 — from source
-
+**macOS / Linux**
 ```bash
 git clone https://github.com/starbooze/design-heuristics-skill
-cd design-heuristics-skill
-/install-skill design-heuristics/
+cp -r design-heuristics-skill/design-heuristics ~/.claude/skills/
 ```
+
+**Windows**
+```powershell
+git clone https://github.com/starbooze/design-heuristics-skill
+Copy-Item -Recurse design-heuristics-skill\design-heuristics $env:USERPROFILE\.claude\skills\
+```
+
+Restart Claude Code — the skill will be available immediately.
 
 ---
 
@@ -95,9 +95,13 @@ walkthroughs of a flow.
 ```
 design-heuristics-skill/
 ├── README.md
-├── design-heuristics.skill     # Prebuilt, ready to install
+├── design-heuristics.skill        # Packaged skill file (zip)
+├── .claude/
+│   └── skills/
+│       └── design-heuristics/
+│           └── SKILL.md           # Plugin format (for future marketplace support)
 └── design-heuristics/
-    └── SKILL.md                # Skill source — install from folder
+    └── SKILL.md                   # Source — copy this folder to install
 ```
 
 ---
