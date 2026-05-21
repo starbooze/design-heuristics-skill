@@ -48,6 +48,26 @@ Fix: validate on blur for Email and Password Confirm at minimum.
 
 ---
 
+## Why a skill, not a prompt?
+
+A well-crafted prompt in chat gives similar results in a single conversation.
+The difference shows up over time:
+
+| | Prompt in chat | Skill |
+|---|---|---|
+| Activation | Copy-paste every time | Type `/design-heuristics` or just ask naturally |
+| Output structure | Varies — sometimes 8 heuristics, sometimes no Visual Design section | Always identical: 10 heuristics, Top 3, Quick Wins, Visual Design |
+| Sharing | Send a text snippet | Install once, works for the whole team |
+| Updates | Everyone maintains their own copy | Fix the skill once → everyone gets the improvement |
+| Context window | Prompt text eats into your conversation | Skill instructions load separately |
+
+**When a prompt is enough:** you're doing a one-off review and don't care about consistency.
+
+**When the skill pays off:** you review designs regularly, want the same format every time,
+or share it with a team.
+
+---
+
 ## Installation
 
 Copy the skill folder into your Claude Code skills directory:
